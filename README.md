@@ -7,8 +7,6 @@
 ```
 git clone git@github.com:qiaoluheng/ninghao_flutter.git
 cd ninghao_flutter
-<!-- git submodule init
-git submodule update -->
 flutter doctor
 flutter run
 ```
