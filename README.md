@@ -1,16 +1,17 @@
 # ninghao_flutter
 
-A new Flutter project.
+“您好”项目是为了初学者提供一个学习基础Flutter基础页面结构、基础部件、 的展现形式。
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Flutter application.
+```
+git clone git@github.com:qiaoluheng/ninghao_flutter.git
+cd ninghao_flutter
+<!-- git submodule init
+git submodule update -->
+flutter doctor
+flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Other
+[个人网站](http://www.yiyuhengxin.com/)
