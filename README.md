@@ -6,10 +6,10 @@
 
 ```
 git clone git@github.com:qiaoluheng/ninghao_flutter.git
-cd ninghao_flutter
+cd ninghao_flutter 
 flutter doctor
 flutter run
 ```
 
 ## Other
-[个人网站](http://www.yiyuhengxin.com/)
+[个人主页](http://www.yiyuhengxin.com/)
