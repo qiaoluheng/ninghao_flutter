@@ -1,6 +1,6 @@
 # ninghao_flutter
 
-“您好”项目是为了初学者提供一个学习基础Flutter基础页面结构、基础部件、 的展现形式。
+“您好”项目是为了Flutter初学者提供学习：Flutter基础页面结构、基础部件。
 
 ## Usage
 
