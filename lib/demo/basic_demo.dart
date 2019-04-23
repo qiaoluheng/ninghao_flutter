@@ -6,7 +6,19 @@ class BasicDemo extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      color: Colors.grey[100],
+      // color: Colors.grey[100],
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/1.png'),
+          alignment: Alignment.topCenter,
+          // repeat: ImageRepeat.repeatY,
+          fit: BoxFit.cover,
+          colorFilter: ColorFilter.mode(
+            Colors.indigoAccent[400].withOpacity(0.5),
+            BlendMode.hardLight
+            )
+        )
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -33,12 +45,14 @@ class BasicDemo extends StatelessWidget{
                 width: 3.0,
                 style: BorderStyle.solid,
               ),
-              borderRadius: BorderRadius.circular(16.0),
+              // borderRadius: BorderRadius.circular(16.0),
               // 也可以单个设置切圆角
               // borderRadius: BorderRadius.only(
               //   topLeft: Radius.circular(45.0),
               //   bottomLeft: Radius.circular(45.0)),
               // ),
+              // 此属性用来改变盒子形状（切圆形）,注意此属性为 circle 时候不能在设置 borderRadius
+              shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
                   // 偏移量 x轴偏移，y轴偏移
@@ -48,8 +62,24 @@ class BasicDemo extends StatelessWidget{
                   blurRadius: 3.0,
                   // 阴影扩散程度
                   spreadRadius: -3.0,
-                )
+                ),
               ],
+              // 添加渐变效果，径向渐变
+              // gradient: RadialGradient(
+              //   colors: [
+              //     Color.fromRGBO(7, 102, 255, 1.0),
+              //     Color.fromRGBO(3, 28, 128, 1.0)
+              //     ]
+              // ),
+              // 线性渐变
+              gradient: LinearGradient(
+                colors: [
+                  Color.fromRGBO(7, 102, 255, 1.0),
+                  Color.fromRGBO(3, 28, 128, 1.0)
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              )
             )
           ),
         ],
