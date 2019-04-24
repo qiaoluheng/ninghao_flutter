@@ -7,7 +7,7 @@ class BasicDemo extends StatelessWidget {
     return Container(
       // color: Colors.grey[100],
       decoration: BoxDecoration(
-          image: DecorationImage(
+          image: DecorationImage( 
               image: AssetImage('assets/images/1.png'),
               alignment: Alignment.topCenter,
               // repeat: ImageRepeat.repeatY,
