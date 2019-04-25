@@ -10,77 +10,110 @@ class LayoutDemo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         // 设置交叉轴对齐方式（主轴的垂直方向）默认是居中center
         // crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Stack(
-            alignment: Alignment.topRight,
-            children: <Widget>[
-              Stack(
-                alignment: Alignment.topRight,
-                children: <Widget>[
-                  SizedBox(
-                    width: 200.0,
-                    height: 300.0,
-                    child: Container(
-                      alignment: Alignment(0.0, -0.9),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(3, 54, 255, 1.0),
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      // child: Icon(Icons.ac_unit,color: Colors.white, size: 32.0),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 32.0,
-                  ),
-                  SizedBox(
-                    width: 100.0,
-                    height: 100.0,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(3, 54, 255, 1.0),
-                          // borderRadius: BorderRadius.circular(8.0),
-                          // 添加渐变
-                          shape: BoxShape.circle,
-                          gradient: RadialGradient(colors: [
-                            Color.fromRGBO(7, 102, 255, 1.0),
-                            Color.fromRGBO(3, 54, 255, 1.0)
-                          ])),
-                      child: Icon(Icons.brightness_2,
-                          color: Colors.white, size: 32.0),
-                    ),
-                  ),
-                  // 定位weiget，位置相对于最大的部件
-                  Positioned(
-                    right: 20.0,
-                    top: 120.0,
-                    child: Icon(Icons.ac_unit, color: Colors.white, size: 20.0),
-                  ),
-                  Positioned(
-                    right: 70.0,
-                    top: 180.0,
-                    child: Icon(Icons.ac_unit, color: Colors.white, size: 16.0),
-                  ),
-                  Positioned(
-                    right: 30.0,
-                    top: 230.0,
-                    child: Icon(Icons.ac_unit, color: Colors.white, size: 18.0),
-                  ),
-                  Positioned(
-                    right: 90.0,
-                    bottom: 20.0,
-                    child: Icon(Icons.ac_unit, color: Colors.white, size: 16.0),
-                  ),
-                  Positioned(
-                    right: 4.0,
-                    bottom: -4.0,
-                    child: Icon(Icons.ac_unit, color: Colors.white, size: 20.0),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ],
+        children: <Widget>[ConstrainedBoxDemo()],
       ),
+    );
+  }
+}
+
+// 设置带限制的盒子
+class ConstrainedBoxDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ConstrainedBox(
+      constraints: BoxConstraints(minHeight: 200.0, maxWidth: 200.0),
+      child: Container(
+        color: Color.fromRGBO(3, 54, 255, 1.0),
+      ),
+    );
+  }
+}
+
+// 设置子部件的宽高比
+class AspectRatioDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(
+      // 设置宽高比
+      aspectRatio: 3.0 / 2.0,
+      child: Container(
+        color: Color.fromRGBO(3, 54, 255, 1.0),
+      ),
+    );
+  }
+}
+
+// stack 中存放一摞小部件
+class StackDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      alignment: Alignment.topRight,
+      children: <Widget>[
+        Stack(
+          alignment: Alignment.topRight,
+          children: <Widget>[
+            SizedBox(
+              width: 200.0,
+              height: 300.0,
+              child: Container(
+                alignment: Alignment(0.0, -0.9),
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(3, 54, 255, 1.0),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                // child: Icon(Icons.ac_unit,color: Colors.white, size: 32.0),
+              ),
+            ),
+            SizedBox(
+              height: 32.0,
+            ),
+            SizedBox(
+              width: 100.0,
+              height: 100.0,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Color.fromRGBO(3, 54, 255, 1.0),
+                    // borderRadius: BorderRadius.circular(8.0),
+                    // 添加渐变
+                    shape: BoxShape.circle,
+                    gradient: RadialGradient(colors: [
+                      Color.fromRGBO(7, 102, 255, 1.0),
+                      Color.fromRGBO(3, 54, 255, 1.0)
+                    ])),
+                child:
+                    Icon(Icons.brightness_2, color: Colors.white, size: 32.0),
+              ),
+            ),
+            // 定位weiget，位置相对于最大的部件
+            Positioned(
+              right: 20.0,
+              top: 120.0,
+              child: Icon(Icons.ac_unit, color: Colors.white, size: 20.0),
+            ),
+            Positioned(
+              right: 70.0,
+              top: 180.0,
+              child: Icon(Icons.ac_unit, color: Colors.white, size: 16.0),
+            ),
+            Positioned(
+              right: 30.0,
+              top: 230.0,
+              child: Icon(Icons.ac_unit, color: Colors.white, size: 18.0),
+            ),
+            Positioned(
+              right: 90.0,
+              bottom: 20.0,
+              child: Icon(Icons.ac_unit, color: Colors.white, size: 16.0),
+            ),
+            Positioned(
+              right: 4.0,
+              bottom: -4.0,
+              child: Icon(Icons.ac_unit, color: Colors.white, size: 20.0),
+            ),
+          ],
+        )
+      ],
     );
   }
 }
