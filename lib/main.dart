@@ -3,6 +3,7 @@ import './demo/listview_demo.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottom_navigation_bar_demo.dart';
 import './demo/basic_demo.dart';
+import './demo/layout_demo.dart';
 // void main() {
 //   runApp(
 //     App()
@@ -14,7 +15,6 @@ void main() => runApp(App());
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       // 右上角 DEBUG 是否显示
       debugShowCheckedModeBanner: false,
@@ -47,7 +47,6 @@ class Navbar extends StatelessWidget {
 
     @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
@@ -95,9 +94,10 @@ class Navbar extends StatelessWidget {
       body: TabBarView(
         children: <Widget>[
           ListViewDemo(),
-          // Icon(Icons.local_florist,size: 128.0, color: Colors.black12),
           BasicDemo(),
-          Icon(Icons.change_history,size: 128.0, color: Colors.black12),
+          LayoutDemo(),
+          // Icon(Icons.local_florist,size: 128.0, color: Colors.black12),
+          // Icon(Icons.change_history,size: 128.0, color: Colors.black12),
           // Icon(Icons.directions_bike,size: 128.0, color: Colors.black12),
         ],
       ),
