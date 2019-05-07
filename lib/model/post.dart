@@ -74,7 +74,8 @@ final List<Post> posts = [
   Post(
     title: 'space Skull',
     author: 'Mohaed Chahin',
-    imageUrl: 'http://test.com'
+    // imageUrl: 'http://test.com'
+    imageUrl: 'http://s9.rr.itc.cn/r/wapChange/201610_12_10/a82qfm8406299199855.jpg'
   ),
   Post(
     title: 'white',
