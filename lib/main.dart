@@ -5,6 +5,7 @@ import './demo/bottom_navigation_bar_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/layout_demo.dart';
 import './demo/sliver_demo.dart';
+import './demo/navigator_demo.dart';
 // void main() {
 //   runApp(
 //     App()
@@ -19,7 +20,16 @@ class App extends StatelessWidget {
     return MaterialApp(
       // 右上角 DEBUG 是否显示
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: Home(),
+      // home: NavigatorDemo(),
+      // 路由方式展示页面
+      // initialRoute: '/',
+      initialRoute: '/about',
+      routes: {
+        // '/':(context) => NavigatorDemo(),
+        '/':(context) => Home(),
+        '/about':(context) => Page(title: 'About',)
+      },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         // 设置整体高亮背景颜色
