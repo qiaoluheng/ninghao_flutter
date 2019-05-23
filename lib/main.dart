@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 // import './demo/sliver_demo.dart';
 import './demo/navigator_demo.dart';
 import 'demo/navbar_appbar_demo.dart';
+import 'demo/navigator_demo1.dart';
 // void main() {
 //   runApp(
 //     App()
@@ -21,14 +22,16 @@ class App extends StatelessWidget {
     return MaterialApp(
       // 右上角 DEBUG 是否显示
       debugShowCheckedModeBanner: false,
-      // home: Home(),
+       home: Home(),
       // home: NavigatorDemo(),
       // 路由方式展示页面
       // initialRoute: '/',
-      initialRoute: '/about',
+//      initialRoute: '/about',
+      initialRoute: '/',
       routes: {
-        // '/':(context) => NavigatorDemo(),
-        '/':(context) => Home(),
+//         '/':(context) => NavigatorDemo(),
+//        '/':(context) => NavigatorDemo1(s),
+        '/about1':(context) => Page1(title: 'About1'),
         '/about':(context) => Page(title: 'About',)
       },
       theme: ThemeData(
