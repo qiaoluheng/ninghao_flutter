@@ -4,6 +4,9 @@ class FormDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Form'),
+      ),
       body: Theme(
         // Theme 指的就是离Theme最近的主题
         // data: ThemeData(
@@ -19,6 +22,10 @@ class FormDemo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RegisterForm(),
+              FloatingActionButton(
+                child: Text('back'),
+                onPressed: () => Navigator.pop(context),
+              )
             ],
           ),
         ),

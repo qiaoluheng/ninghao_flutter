@@ -24,6 +24,9 @@ class ConstrainedBoxDemo extends StatelessWidget {
       constraints: BoxConstraints(minHeight: 200.0, maxWidth: 200.0),
       child: Container(
         color: Color.fromRGBO(3, 54, 255, 1.0),
+        child: OutlineButton(
+          onPressed: () => Navigator.pushNamed(context, '/mdc'),
+        ),
       ),
     );
   }
