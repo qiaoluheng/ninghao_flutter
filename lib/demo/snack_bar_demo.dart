@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// 操作提示栏
 class SnackBarDemo extends StatefulWidget {
   @override
   _SnackBarDemoState createState() => _SnackBarDemoState();

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ninghao_flutter/demo/chip_demo.dart';
 import './button_demo.dart';
 import './floating_action_button.dart';
 import './popup_menu_button_demo.dart';
@@ -24,6 +25,10 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'ChipDemo',
+            page: ChipDemo(),
+          ),
           ListItem(
             title: 'ExpansionPanelDemo',
             page: ExpansionPanelDemo(),
