@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/demo/chip_demo.dart';
+
 import './button_demo.dart';
 import './floating_action_button.dart';
 import './popup_menu_button_demo.dart';
@@ -14,6 +15,10 @@ import './simple_dialog_demo.dart';
 import './bottom_sheet_demo.dart';
 import './snack_bar_demo.dart';
 import './expansion_panel_demo.dart';
+import './data_table_demo.dart';
+import './paginated_data_table_demo.dart';
+import './card_demo.dart';
+import './stepper_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -25,6 +30,22 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'StepperDemo',
+            page: StepperDemo(),
+          ),
+          ListItem(
+            title: 'CardDemo',
+            page: CardDemo(),
+          ),
+          ListItem(
+            title: 'PaginatedDataTableDemo',
+            page: PaginatedDataTableDemo(),
+          ),
+          ListItem(
+            title: 'DataTableDemo',
+            page: DataTableDemo(),
+          ),
           ListItem(
             title: 'ChipDemo',
             page: ChipDemo(),
