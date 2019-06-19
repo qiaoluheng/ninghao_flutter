@@ -35,7 +35,7 @@ class _RxDartDemoHomeState extends State<RxDartDemoHome> {
       // .map((item) => 'item: $item')  // 添加 item: 
       // .where((item) => item.length > 10)  // RxDart 条件转换
       .debounceTime(Duration(milliseconds: 3000))
-      .listen((data) => print(data));
+      .listen((data) => print(data)); 
 
 
 
