@@ -19,6 +19,7 @@ import './demo/bloc/bloc_demo.dart';
 
 import './demo/http/http_demo.dart';
 
+import './demo/animation/animation_demo.dart';
 // void main() {
 //   runApp(
 //     App()
@@ -44,7 +45,8 @@ class App extends StatelessWidget {
       // initialRoute: '/stream',
       // initialRoute: '/rxdart',
       // initialRoute: '/bloc',
-      initialRoute: '/http',
+      // initialRoute: '/http',
+      initialRoute: '/animation',
       routes: {
 //         '/':(context) => NavigatorDemo(),
 //        '/':(context) => NavigatorDemo1(s),
@@ -58,6 +60,7 @@ class App extends StatelessWidget {
         '/rxdart': (context) => RxDartDemo(),
         '/bloc':(context) => BlocDemo(),
         '/http':(context) => HttpDemo(),
+        '/animation':(context) => AnimationDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
